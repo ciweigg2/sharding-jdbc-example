@@ -3,7 +3,7 @@
 <mapper namespace="com.forezp.shardingjdbcmasterslave.repository.UserRepository">
     
     <resultMap id="baseResultMap" type="com.forezp.shardingjdbcmasterslave.entity.User">
-        <result column="id" property="id" jdbcType="INTEGER" />
+        <result column="id" property="id" jdbcType="BIGINT" />
         <result column="username" property="username" jdbcType="VARCHAR" />
         <result column="password" property="password" jdbcType="VARCHAR" />
     </resultMap>
@@ -13,7 +13,7 @@
           id, username, password
         )
         VALUES (
-        #{id,jdbcType=INTEGER},
+        #{id,jdbcType=BIGINT},
         #{username,jdbcType=VARCHAR},
         #{password,jdbcType=VARCHAR}
         )

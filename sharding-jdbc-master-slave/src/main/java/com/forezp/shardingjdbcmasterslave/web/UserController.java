@@ -19,7 +19,7 @@ public class UserController {
     }
 
     @GetMapping("/add")
-    public Object add(@RequestParam Integer id,@RequestParam String username,@RequestParam String  password) {
+    public Object add(@RequestParam Long id,@RequestParam String username,@RequestParam String  password) {
         User user = new User();
         user.setId(id);
         user.setUsername(username);

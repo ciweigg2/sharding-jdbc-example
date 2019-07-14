@@ -27,7 +27,7 @@ public class UserController {
 
         for(int i=100;i<150;i++) {
             User user = new User();
-            user.setId(i);
+            user.setId(1000L);
             user.setUsername("forezp"+(i));
             user.setPassword("1233edwd");
            long resutl=   userService.addUser(user);

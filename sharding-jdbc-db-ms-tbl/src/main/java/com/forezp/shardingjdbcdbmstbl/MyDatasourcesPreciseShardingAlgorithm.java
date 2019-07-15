@@ -7,12 +7,12 @@ import io.shardingsphere.api.algorithm.sharding.standard.PreciseShardingAlgorith
 import java.util.Collection;
 
 /**
- * 自定义分片算法
+ * 自定义分片算法 数据库逻辑可以将配置逻辑放在redis然后读取 可以根据id规则或者根据创建日期等等做分片的呀
  * 
- * @author yinjihuan
+ * @author Ciwei
  *
  */
-public class MyPreciseShardingAlgorithm implements PreciseShardingAlgorithm<Long> {
+public class MyDatasourcesPreciseShardingAlgorithm implements PreciseShardingAlgorithm<Long> {
 
 	@Override
 	public String doSharding(Collection<String> availableTargetNames, PreciseShardingValue<Long> shardingValue) {

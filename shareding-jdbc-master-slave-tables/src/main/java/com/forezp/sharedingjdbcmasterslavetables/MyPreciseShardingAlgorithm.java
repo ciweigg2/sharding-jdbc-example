@@ -9,7 +9,7 @@ import java.util.Collection;
 /**
  * 自定义分片算法
  * 
- * @author yinjihuan
+ * @author Ciwei
  *
  */
 public class MyPreciseShardingAlgorithm implements PreciseShardingAlgorithm<Integer> {

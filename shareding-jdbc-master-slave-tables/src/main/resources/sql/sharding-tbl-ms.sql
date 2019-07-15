@@ -16,15 +16,6 @@ CREATE DATABASE /*!32312 IF NOT EXISTS*/`cool2` /*!40100 DEFAULT CHARACTER SET u
 
 USE `cool2`;
 
-/*Table structure for table `role` */
-
-DROP TABLE IF EXISTS `role`;
-
-CREATE TABLE `role` (
-  `id` bigint(64) NOT NULL AUTO_INCREMENT,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
-
 /*Table structure for table `user_0` */
 
 DROP TABLE IF EXISTS `user_0`;

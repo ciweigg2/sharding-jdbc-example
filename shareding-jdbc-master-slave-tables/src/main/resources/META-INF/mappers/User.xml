@@ -18,9 +18,13 @@
         #{password,jdbcType=VARCHAR}
         )
     </insert>
+
+    <delete id="deleteUser">
+        DELETE FROM user WHERE id = #{id}
+    </delete>
    
     <select id="list" resultMap="baseResultMap">
-        SELECT u.* FROM user u
+        SELECT u.* FROM user u order by u.id
     </select>
 
 </mapper>

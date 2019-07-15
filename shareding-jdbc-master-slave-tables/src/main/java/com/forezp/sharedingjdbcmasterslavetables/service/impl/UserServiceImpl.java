@@ -10,22 +10,28 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class UserServiceImpl  implements UserService {
+public class UserServiceImpl implements UserService {
 
-    @Autowired
-    UserRepository userRepository;
+	@Autowired
+	UserRepository userRepository;
 
-    @Override
-    public Integer addUser(User user) {
+	@Override
+	public Integer addUser(User user) {
 
-        // 强制路由主库
-        //HintManager.getInstance().setMasterRouteOnly();
-        return userRepository.addUser(user);
-    }
+		// 强制路由主库
+		//HintManager.getInstance().setMasterRouteOnly();
+		return userRepository.addUser(user);
+	}
 
-    @Override
-    public List<User> list() {
+	@Override
+	public Integer deleteUser(Long id) {
+		return userRepository.deleteUser(id);
+	}
 
-        return userRepository.list();
-    }
+	@Override
+	public List<User> list() {
+
+		return userRepository.list();
+	}
+
 }

@@ -12,27 +12,34 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class UserController {
 
-    Logger logger= LoggerFactory.getLogger(UserController.class);
+	Logger logger = LoggerFactory.getLogger(UserController.class);
 
-    @Autowired
-    private UserService userService;
+	@Autowired
+	private UserService userService;
 
-    @GetMapping("/users")
-    public Object list() {
-        return userService.list();
-    }
+	@GetMapping("/users")
+	public Object list() {
+		return userService.list();
+	}
 
-    @GetMapping("/add")
-    public Object add() {
+	@GetMapping("/add")
+	public Object add() {
 
-        for(int i=100;i<150;i++) {
-            User user = new User();
-            user.setId(1000L);
-            user.setUsername("forezp"+(i));
-            user.setPassword("1233edwd");
-           long resutl=   userService.addUser(user);
-            logger.info("insert:"+user.toString()+" result:"+resutl);
-        }
-        return "ok";
-    }
+		for (Long i = 100L; i < 150; i++) {
+			User user = new User();
+			user.setId(i);
+			user.setUsername("forezp" + (i));
+			user.setPassword("1233edwd");
+			long resutl = userService.addUser(user);
+			logger.info("insert:" + user.toString() + " result:" + resutl);
+		}
+		return "ok";
+	}
+
+	@GetMapping("/delete")
+	public Object delete(Long id) {
+		userService.deleteUser(id);
+		return "ok";
+	}
+
 }

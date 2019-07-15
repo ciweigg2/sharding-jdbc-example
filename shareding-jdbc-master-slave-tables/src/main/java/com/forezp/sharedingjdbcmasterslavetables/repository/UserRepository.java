@@ -11,6 +11,8 @@ public interface UserRepository {
 
     Integer addUser(User user);
 
+    Integer deleteUser(Long id);
+
     List<User> list();
 
 }
